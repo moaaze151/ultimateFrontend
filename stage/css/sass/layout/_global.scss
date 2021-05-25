@@ -8,6 +8,16 @@
     transition: 0.3s;
     will-change: width;
     float: right;
+    &.ally-area{
+      width:100%;
+    }
+    .header{
+      p{
+        color: rgb(22, 25, 197);
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
   }
-}
+} 
 

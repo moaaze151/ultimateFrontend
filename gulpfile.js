@@ -29,7 +29,7 @@ gulp.task('css',function(){
 
 //task js 
 gulp.task('js',function(){
-  return gulp.src('stage/html/*.js')
+  return gulp.src('stage/js/*.js')
           .pipe(concat('main.js'))
           .pipe(minify())
           .pipe(gulp.dest('dist/js'))
