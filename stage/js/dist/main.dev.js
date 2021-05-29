@@ -3,15 +3,26 @@
 new Vue({
   el: '#app',
   data: {
-    clicked: false
+    clicked: false,
+    showenone: true,
+    showentwo: true
   },
-  methods: {},
   computed: {
     'noslidebar': function noslidebar() {
       return this.clicked ? 'no-sidebar' : '';
     },
     'allcontent': function allcontent() {
       return this.clicked ? 'ally-area' : '';
+    },
+    'toBeShowenOne': function toBeShowenOne() {
+      return this.showenone ? 'beShowen' : '';
+    },
+    'toBeShowenTwo': function toBeShowenTwo() {
+      return this.showentwo ? 'beShowen' : '';
     }
   }
-});
+}); // methods:{ 
+//     showIt:function(e){
+//         e.target.setAttribute('class','beShowen'); 
+//     }
+// },

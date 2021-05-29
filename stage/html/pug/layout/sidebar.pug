@@ -1,2 +1,22 @@
-div(class ="sliderbar" :class='noslidebar') sidebar
+div(class ="sliderbar" :class='noslidebar')
+  .logo-area.text-center MoaazDs
+  ul.links-area.list-unstyled
+    li: a(href="#") Message
+    li 
+      a(href="#"  @click="showenone = !showenone") Forms 
+      ul(class="child-links list-unstyled" :class="toBeShowenOne")
+        li: a(href="#") Input
+        li: a(href="#") Textarea  
+        li: a(href="#") Checkbox 
+        li: a(href="#") Radio
+      
+      i(class="fas fa-angle-down icon-side" )
+    li 
+      a(href="#"  @click="showentwo = !showentwo") Misc
+      ul(class="child-links list-unstyled" :class="toBeShowenTwo")
+        li: a(href="#") Loading
+        li: a(href="#") Bredcrumbx 
+      
+      i(class="fas fa-angle-down icon-side")  
+        
 

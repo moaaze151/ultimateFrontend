@@ -2,19 +2,20 @@
 <!DOCTYPE html>
 html(lang="en")
   head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport" ,content="width=device-width, initial-scale=1.0")
-    title #{pageTitle}
+    include pug/layout/meta
     include pug/layout/links
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   body
-    #app
+    #app 
       .page.home-page
         include pug/layout/sidebar 
         div(class ="content-area" :class='allcontent')
           include pug/layout/header
-          .content 
-            h1 #{pageTitle}
+          .container-fluid
+            .content
+              include pug/layout/pagehead
+       
+
 
   include pug/layout/scripts 
             

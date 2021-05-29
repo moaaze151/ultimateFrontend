@@ -1,1 +1,1 @@
-new Vue({el:"#app",data:{clicked:!1},methods:{},computed:{noslidebar:function(){return this.clicked?"no-sidebar":""},allcontent:function(){return this.clicked?"ally-area":""}}});
+new Vue({el:"#app",data:{clicked:!1,showenone:!0,showentwo:!0},computed:{noslidebar:function(){return this.clicked?"no-sidebar":""},allcontent:function(){return this.clicked?"ally-area":""},toBeShowenOne:function(){return this.showenone?"beShowen":""},toBeShowenTwo:function(){return this.showentwo?"beShowen":""}}});
