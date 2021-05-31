@@ -8,9 +8,7 @@
   padding: 15px;
   transition: 0.3s;
   color: #fff;
-}
-.page .sliderbar.no-sidebar {
-  left: -250px;
+  transition: 0.5s;
 }
 .page .sliderbar .logo-area {
   font-size: 1.7rem;
@@ -91,4 +89,8 @@
   width: 15px;
   color: #07a75c;
   font-size: 18px;
+}
+
+.no-sidebar {
+  left: -250px;
 }

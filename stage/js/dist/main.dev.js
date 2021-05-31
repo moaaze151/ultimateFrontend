@@ -1,19 +1,21 @@
 "use strict";
 
+var sliderbar = document.getElementById('sliderbar-id');
+var allcontent = document.getElementById('allcontent-id');
 new Vue({
   el: '#app',
   data: {
-    clicked: false,
     showenone: true,
-    showentwo: true
+    showentwo: true // sliderbar:sliderbar,
+
+  },
+  methods: {
+    'showHideSidebar': function showHideSidebar() {
+      sliderbar.classList.toggle('no-sidebar');
+      sliderbar.classList.toggle('ally-area');
+    }
   },
   computed: {
-    'noslidebar': function noslidebar() {
-      return this.clicked ? 'no-sidebar' : '';
-    },
-    'allcontent': function allcontent() {
-      return this.clicked ? 'ally-area' : '';
-    },
     'toBeShowenOne': function toBeShowenOne() {
       return this.showenone ? 'beShowen' : '';
     },
@@ -21,8 +23,4 @@ new Vue({
       return this.showentwo ? 'beShowen' : '';
     }
   }
-}); // methods:{ 
-//     showIt:function(e){
-//         e.target.setAttribute('class','beShowen'); 
-//     }
-// },
+});

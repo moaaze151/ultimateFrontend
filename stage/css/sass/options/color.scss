@@ -1,0 +1,28 @@
+//Make an objesct
+$themes:(
+    green-theme:(
+        mycolor :#27ae60  //key :value
+    ),
+    blue-theme:(
+        mycolor :#2980b9//mycolor :#2980b9,mybackgroundcolor:#27ae60
+    ),
+    red-theme:(
+        mycolor :#c0392b
+    ),
+);
+//looping on it
+@each $theme, $map in $themes{
+    .#{$theme}{ //interpolation 
+        // .classname{
+        //     color: map-get($map,mycolor); // map-get :require the map and the key
+        //     // background-color: map-get($map,mybackgroundcolor);
+        // }
+        .setting-box .setting-content .option-box .option-title {
+            color: map-get($map,mycolor)
+        }
+    }
+}
+
+//.green-theme .classname{color:#27ae60}
+//.blue-theme .classname{color:#2980b9}
+//.red-theme .classname{color:#c0392b}

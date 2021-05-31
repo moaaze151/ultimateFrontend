@@ -3,6 +3,7 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+
 .page{
   min-height: 100vh;
   .content-area{
@@ -15,15 +16,88 @@ body{
     &.ally-area{
       width:100%;
     }
+   //headeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeer::
     .header{
       background-color: #fff;
       padding: 15px 5px 0px 10px ;
-      p{
-        color: #000;
+      div{
         font-size: 22px;
         font-weight: 700;
+        .div-icon{
+          margin-bottom:3px; 
+        }
+      }
+      .notification-cont{
+        display: inline-block;
+        div{
+          .drowp-icon{
+            color: rgb(255, 255, 255);
+            cursor:pointer;
+            margin-left:10px;
+            margin-bottom: 2px;
+            font-size: rem;
+        
+          }
+        }
+        .dropdown-menu{
+          padding: 0;
+          min-width: 500px;
+          border: none;
+          top:10px !important;
+          &:before{
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 12px;
+            border-color: transparent transparent rgb(21, 197, 182);
+            top: -14px;
+            left: 12px;
+          }
+          .notifi-head{
+            margin-top: 10px;
+            background-color: #444;
+            padding: 15px;
+            color: #eee;
+            span{
+              float: right;
+            }
+          }
+          .notifi-content{
+            font-size: 18px;
+            padding: 20px;
+            ul{
+              margin-bottom: 0px;
+              li{
+                padding: 20px;
+                &:first-child{
+                  padding-top:0;
+                }
+                &:last-child{
+                  padding-bottom: 0;
+                }
+                .notifi-content-icon{
+                  color: rgb(253, 253, 253); 
+                  padding: 4px; 
+                  margin-right: 10px;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+          .notifi-footer{
+            a{
+              display: block;
+              padding: 10px;
+              border-top: 1px solid #eee;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+        }
       }
     }
   }
 } 
+
 

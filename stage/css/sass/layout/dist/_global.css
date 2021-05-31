@@ -19,15 +19,86 @@ body {
   float: right;
   background-color: #f2f1f6;
 }
-.page .content-area.ally-area {
-  width: 100%;
-}
 .page .content-area .header {
   background-color: #fff;
   padding: 15px 5px 0px 10px;
 }
-.page .content-area .header p {
-  color: #000;
+.page .content-area .header div {
+  color: #15c5b6;
   font-size: 22px;
   font-weight: 700;
+}
+.page .content-area .header div .div-icon {
+  margin-bottom: 3px;
+}
+.page .content-area .header .notification-cont {
+  display: inline-block;
+}
+.page .content-area .header .notification-cont div .drowp-icon {
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  font-size: 2rem;
+  background-color: #15c5b6;
+  padding: 7px;
+  border-radius: 50%;
+}
+.page .content-area .header .notification-cont .dropdown-menu {
+  padding: 0;
+  min-width: 500px;
+  border: none;
+  top: 10px !important;
+}
+.page .content-area .header .notification-cont .dropdown-menu:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 12px;
+  border-color: transparent transparent #15c5b6;
+  top: -14px;
+  left: 12px;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-head {
+  margin-top: 10px;
+  background-color: #444;
+  padding: 15px;
+  color: #eee;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-head span {
+  float: right;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content {
+  padding: 20px;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content ul {
+  margin-bottom: 0px;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content ul li {
+  padding: 20px;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content ul li:first-child {
+  padding-top: 0;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content ul li:last-child {
+  padding-bottom: 0;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-content ul li .notifi-content-icon {
+  color: #fdfdfd;
+  padding: 4px;
+  margin-right: 10px;
+  background-color: #18bdaf;
+  border-radius: 50%;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-footer a {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+.page .content-area .header .notification-cont .dropdown-menu .notifi-footer a:hover {
+  text-decoration: none;
+}
+
+.ally-area {
+  width: 100%;
 }

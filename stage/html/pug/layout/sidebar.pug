@@ -1,7 +1,7 @@
-div(class ="sliderbar" :class='noslidebar')
-  .logo-area.text-center MoaazDs
+div(class ="sliderbar" id="sliderbar-id")
+  .logo-area.text-center(:style="{'color':mycolor}") MoaazDs
   ul.links-area.list-unstyled
-    li: a(href="#") Message
+    li: a(href="homepage.html" class= pageTitle === 'Home Page'?'active':'') homepage
     li 
       a(href="#"  @click="showenone = !showenone") Forms 
       ul(class="child-links list-unstyled" :class="toBeShowenOne")
@@ -9,14 +9,14 @@ div(class ="sliderbar" :class='noslidebar')
         li: a(href="#") Textarea  
         li: a(href="#") Checkbox 
         li: a(href="#") Radio
-      
       i(class="fas fa-angle-down icon-side" )
+
     li 
       a(href="#"  @click="showentwo = !showentwo") Misc
       ul(class="child-links list-unstyled" :class="toBeShowenTwo")
         li: a(href="#") Loading
         li: a(href="#") Bredcrumbx 
-      
-      i(class="fas fa-angle-down icon-side")  
-        
+      i(class="fas fa-angle-down icon-side")    
+
+    li: a(href="charts.html" class= pageTitle === 'charts'?'active':'') charts 
 

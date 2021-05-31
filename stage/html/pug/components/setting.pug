@@ -1,0 +1,16 @@
+.setting-box#clicking-box
+    div(onclick="showHbox()" class="toggle-p")
+        i(class="fas fa-cog fa-lg toggle-settings")
+    .setting-content
+        .option-box.color-options.text-center
+            h4.option-title color options
+            - var themes=['green-theme','blue-theme','red-theme']   
+            ul.list-unstyled
+                //- each theme in themes
+                li(data-theme='#27ae60' style="background-color:#27ae60" @click="updatingcolors")
+                li(data-theme='#2980b9' style="background-color:#2980b9" @click="updatingcolors")
+                li(data-theme='#c0392b' style="background-color:#c0392b" @click="updatingcolors")
+        .option-box
+            h4.option-title font options
+        .option-box 
+            h4.option-title sidebar options   

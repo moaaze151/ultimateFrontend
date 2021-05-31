@@ -3,12 +3,13 @@
     width: 250px;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0px;
     height: 100vh;
     background-color: #292c33;
     padding: 15px;
     transition:  0.3s;
     color:#fff; 
+    transition: .5s;
     &.no-sidebar{
       left: -250px;
     }
@@ -36,6 +37,11 @@
             text-decoration:none; 
             color:#ffffff;
           }
+          &.active{
+            &:before{
+              border-color: #ffc107;
+            }
+          }
         }
       }
       //all links
@@ -58,7 +64,7 @@
         } 
       }
       .child-links{
-        position: relative;
+        position: relative; 
         &:before{
           content:'';
           position:absolute;
@@ -100,3 +106,4 @@
     
   }
 } 
+ 

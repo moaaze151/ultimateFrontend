@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Home Page</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/main.css"/><script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet"/><script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
     <div id="app"> 
       <div class="page home-page">
-        <div class="sliderbar" :class="noslidebar">
+        <div class="sliderbar" id="sliderbar-id">
           <div class="logo-area text-center">MoaazDs</div>
           <ul class="links-area list-unstyled">
             <li><a href="#">Message</a></li>
@@ -31,9 +33,26 @@
             </li>
           </ul>
         </div>
-        <div class="content-area" :class="allcontent">
+        <div class="content-area" id="allcontent-id">
           <div class="header">
-            <p @click="clicked=!clicked" style="cursor:pointer;width:100px;"><i class="fas fa-exchange-alt fa-lg"> </i></p>
+            <div @click="showHideSidebar" style="cursor:pointer;width:35px;display:inline-block"><i class="fas fa-exchange-alt fa-lg div-icon"> </i></div>
+            <div class="dropdown notification-cont">
+              <div id="notifications" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell fa-lg drowp-icon"> </i></div>
+              <div class="dropdown-menu" aria-labelledby="notifications">
+                <div class="notifi-head">notification<span>50  </span></div>
+                <div class="notifi-content">
+                  <ul class="list-unstyled"> 
+                    <li><i class="fas fa-envelope fa-lg notifi-content-icon"></i>You've got Email from jdhfhsdh</li>
+                    <li><i class="fas fa-money-check-alt fa-lg notifi-content-icon"></i>You've money money from jdhfhsdh</li>
+                    <li><i class="fas fa-thumbs-up fa-lg notifi-content-icon"></i>You've got Likes from jdhfhsdh</li>
+                    <li><i class="fas fa-hamburger fa-lg notifi-content-icon"></i>You've got hamburgers from jdhfhsdh</li>
+                    <li><i class="fab fa-angellist fa-lg notifi-content-icon"></i>You've got angellist from jdhfhsdh</li>
+                  </ul>
+                </div>
+                <div class="notifi-footer text-center"><a href="#">View All Notifications</a></div>
+              </div>
+            </div>
+            <div style="display:inline-block;cursor:pointer;padding:3px"><i class="fas fa-expand fa-lg toggle-fullscreen" style="margin: 1px 1px 5px 7px;color:#15c5b6"></i></div>
           </div>
           <div class="container-fluid">
             <div class="content">

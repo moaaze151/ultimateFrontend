@@ -1,4 +1,30 @@
-.header
-    p(@click="clicked=!clicked" style='cursor:pointer;width:100px;' )
-        i(class="fas fa-exchange-alt fa-lg" )  
-        
+.header 
+    div(onclick="show()" style='cursor:pointer;width:35px;display:inline-block' :style="{'color':mycolor}") 
+        i(class="fas fa-exchange-alt fa-lg div-icon")  
+    .dropdown.notification-cont
+        div#notifications(data-bs-toggle='dropdown' aria-expanded='false' :style="{'background-color':mycolor}")
+            i(class="fas fa-bell fa-lg drowp-icon" ) 
+        .dropdown-menu(aria-labelledby='notifications')
+            .notifi-head
+                | notification
+                span 50  
+            .notifi-content
+                ul.list-unstyled  
+                    li
+                        i(class="fas fa-envelope fa-lg notifi-content-icon" :style="{'background-color':mycolor}") 
+                        | You've got Email from jdhfhsdh
+                    li
+                        i(class="fas fa-money-check-alt fa-lg notifi-content-icon" :style="{'background-color':mycolor}")
+                        | You've money money from jdhfhsdh
+                    li
+                        i(class="fas fa-thumbs-up fa-lg notifi-content-icon" :style="{'background-color':mycolor}")
+                        | You've got Likes from jdhfhsdh
+                    li
+                        i(class="fas fa-hamburger fa-lg notifi-content-icon" :style="{'background-color':mycolor}")
+                        | You've got hamburgers from jdhfhsdh
+                    li
+                        i(class="fab fa-angellist fa-lg notifi-content-icon" :style="{'background-color':mycolor}")
+                        | You've got angellist from jdhfhsdh
+            .notifi-footer.text-center: a(href='#') View All Notifications
+    div(style="display:inline-block;cursor:pointer;padding:3px") 
+        i(class="fas fa-expand fa-lg toggle-fullscreen" :style="{'color':mycolor}") 
